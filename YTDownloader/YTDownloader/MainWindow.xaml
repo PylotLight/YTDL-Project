@@ -1,0 +1,43 @@
+﻿<Window x:Class="YTDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YTDownloader"
+        mc:Ignorable="d"    
+        ResizeMode="NoResize"
+        Title = "Youtube Downloader 2.0" Width = "350" Height = "400" >
+    <Border x:Name="CanvasBorder" BorderBrush="Beige"  Padding="10">
+        
+        <Canvas Margin = "0,0" Width = "350" Height = "400" >
+        <Label Name = "TitleLabel" Content = "Youtube Downloader 2.0" HorizontalAlignment = "Right" Margin = "60,5" FontWeight = "Bold" FontSize = "20" Panel.ZIndex = "20" >
+             </Label>
+        <Label Name = "URLLabel" Content = "Enter YT URL Below Then Select Download" HorizontalAlignment = "Right"  Margin = "15,60" FontWeight = "Bold" Panel.ZIndex = "19" >
+            </Label>
+        <TextBox x:Name = "URLTextBox"  HorizontalAlignment = "Right" Margin = "35,85,0,0" Width = "auto" MinWidth = "150" MaxWidth = "290" Height = "20" Panel.ZIndex = "18">
+            </TextBox>
+         <TextBlock Name = "InfoTextblock" Text = "This would be an explainer or guide with info" Margin = "35,240,0,0" TextWrapping = "Wrap" Width = "90" Height = "17" Panel.ZIndex = "20">
+        </TextBlock>
+        <ListBox Name = "Listbox" Margin = "25,180" HorizontalAlignment = "Right" Width = "200" Height = "50" Panel.ZIndex = "10" >
+            <ListBoxItem Content = "MP3" />
+            <ListBoxItem Content = "Video" />
+        </ListBox>
+        <Image Name = "YT" Margin = "-60,-80" Width = "470" Height = "520" Source = "D:\Media\Pictures\YT.PNG" Stretch = "Fill" Panel.ZIndex = "5" >
+            <Image.Effect >
+                <BlurEffect Radius = "25" />
+            </Image.Effect>
+        </Image>
+        <Button x:Name = "LocationButton" Click="LocationButton_Click" Width = "Auto" Height = "20" Content = 'Select Download Location' Margin = "35,120" Background = "#385de2" Foreground = "#FFFDFDFD" FontWeight = "Bold" VerticalAlignment = "Bottom" HorizontalAlignment = "Right" Panel.ZIndex = "14" >
+          </Button>
+        <Button x:Name = "CancelButton" Click="CancelButton_Click" Width = "50" Height = "20" Content = 'Cancel' VerticalAlignment = "Bottom" Background = "#c10d1c" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Margin = "220,320" Panel.ZIndex = "13" >
+          </Button>
+        <Button x:Name="DownloadButton" Click="DownloadButton_Click" Width="Auto" Height = "20" Content = 'Download' VerticalAlignment = "Bottom" Background = "#2eaa4b" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Margin = "210,120" Panel.ZIndex = "12" >
+        </Button>
+        <StatusBar DockPanel.Dock = "Bottom" Panel.ZIndex = "11" Margin = "0,333" FontSize = "9" FontWeight = "Bold" Background = "#2eaa4b" Width = "350" Height = "20" >
+            <StatusBarItem >
+                <TextBlock x:Name = "InfoStatusBar" Text = "Youtube Downloader 2.0" />
+            </StatusBarItem>
+        </StatusBar>
+    </Canvas>
+   </Border>
+</Window>

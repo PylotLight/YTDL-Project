@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="YTDownloader.exe" version="1.0.0.0" publicKeyToken="c7e7f4a48eeb44b2" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="YTDownloader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="YTDownloader.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YTDownloader.exe" size="13232">
+      <assemblyIdentity name="YTDownloader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yTNzzDJmo4eHL0nzuToiMKLkBmX+YnufhJ0kBpolRvk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="YTDownloader.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on and is
+           is designed to work with. Uncomment the appropriate elements and Windows will 
+           automatically selected the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=LOCHYPC\Lochy" issuerKeyHash="21f14fbbf20bf18f060da6a4c8337f02b477c0dc" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>iksOc/k4EEXnIQvs84gRkdFi99iVsjY9iZBo0/hKXDw=</DigestValue></Reference></SignedInfo><SignatureValue>bdFarHSH28GkFJLcLdn+jW4SNs9YCVLKhf7Z0bkNlBqKzkTwIp6Ez706IOh4jiqgT4RHyMwnspbckGhEkz0OgaQt+JLGnNHmJIcjUKaxaC/UsaircngbrYc21Bv3rzsLFNdSPKdniTTE0Dcw14kL3zYdfPwIbWilF6nTVGyOJ3k=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>sUjj2OAIstBuk9on1vJoJ9upvFGOnnJTvfdvzl7L2G/Hpapne45cILzQRtuv6QxQ7aCrBjbomPHKXbpFaeiGESlVe5c3bYKxEflYZc76+Qq60Xg298d7zq+rKUD988L1UeRJNLz5nWnOg9v/z0VBGJYeT7RdgF1s5IVXbRqPxWU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3c5c4af8d36890893d36b295d8f762d1911188f3ec0b21e7451038f9730e4b8a" Description="" Url=""><as:assemblyIdentity name="YTDownloader.exe" version="1.0.0.0" publicKeyToken="c7e7f4a48eeb44b2" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LOCHYPC\Lochy</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>a0q/xjtMyIoiWcHpse/j4f5Seh7WZmrsGbwkZ2WsGiQ=</DigestValue></Reference></SignedInfo><SignatureValue>l8EfuXAjbrR+9SUS+3buFeyQzLqqq+OpCLHVcu7UwPuTcBIwW2K2cGN8XS8Xac+giwlh+i2ytB5alniMyzEZIT3BSh7m4kXU2zRn7f4XwwUgo3jdnW2cBzxccDU8VMQDN7CWAJtjI57RY4jLDMZZ0xEvygXaMZbkquY0GkY396o=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>sUjj2OAIstBuk9on1vJoJ9upvFGOnnJTvfdvzl7L2G/Hpapne45cILzQRtuv6QxQ7aCrBjbomPHKXbpFaeiGESlVe5c3bYKxEflYZc76+Qq60Xg298d7zq+rKUD988L1UeRJNLz5nWnOg9v/z0VBGJYeT7RdgF1s5IVXbRqPxWU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQR1Kst4rSA6hCHR/ApbAm6zANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDHhoATABPAEMASABZAFAAQwBcAEwAbwBjAGgAeTAeFw0xNzA4MjExMzM0MDRaFw0xODA4MjExOTM0MDRaMCUxIzAhBgNVBAMeGgBMAE8AQwBIAFkAUABDAFwATABvAGMAaAB5MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCxSOPY4Aiy0G6T2ifW8mgn26m8UY6eclO992/OXsvYb8elqmd7jlwgvNBG26/pDFDtoKsGNuiY8cpdukVp6IYRKVV7lzdtgrER+Vhlzvr5CrrReDb3x3vOr6spQP3zwvVR5Ek0vPmdac6D2//PRUEYlh5PtF2AXWzkhVdtGo/FZQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAH+VGqOTJFVH0lKxoitN8EckWS6cdp6nXXZXr+8xL58lYd2e71EyBeIsD0Wsi928RCZV1o9niBh9xlx1gshVloazhAhDMeC57qmoK7Qc9ywKRAWsutwp8RtmwVo2UbvGqFbJQ1A5rfGUZI3odibPL80+fyMR4I+Q4zP/0oBWTl+e</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
