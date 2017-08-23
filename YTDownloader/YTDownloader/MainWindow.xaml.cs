@@ -57,7 +57,7 @@ namespace YTDownloader
             MessageBox.Show(System.Windows.Forms.Application.StartupPath + "\\Data");
         }
 
-        public void DownloadButton_Click(object sender, RoutedEventArgs e)
+        private void DownloadButton_Click(object sender, RoutedEventArgs e)
         {
             string YTDLURL = URLTextBox.Text;
             string YTDLConfigPath = (System.Windows.Forms.Application.StartupPath + "\\Data\\Mp3Config.txt");
@@ -72,10 +72,26 @@ namespace YTDownloader
             
             InfoStatusBar.Text = "Finished Downloading";
         }
+        private void TestDownloadButton_Click(object sender, RoutedEventArgs e)
+        {
+            string YTDLURL = URLTextBox.Text;
+            string YTDLConfigPath = "D:\\Programs\\YTDL\\Mp3Config.txt";
+            string YTDLAppPath = (System.Windows.Forms.Application.StartupPath + "D:\\Programs\\YTDL\\youtube - dl.exe");
+            string YTDLDownloadPath = SavePath.SelectedPath;
+            string YTDLFFMpegPath = (System.Windows.Forms.Application.StartupPath + "D:\\Programs\\YTDL\\ffmpeg\\bin");
 
+            ProcessStartInfo YDTLstartinfo = new ProcessStartInfo();
+            YDTLstartinfo.FileName = YTDLAppPath;
+            YDTLstartinfo.Arguments = ("--config-location " + YTDLConfigPath + " -o " + YTDLDownloadPath + "\\%(title)s.%(ext)s" + " --ffmpeg-location " + YTDLFFMpegPath + " " + YTDLURL);
+            Process.Start(YDTLstartinfo);
+
+            InfoStatusBar.Text = "Finished Downloading";
+        }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+       
     }
 }
