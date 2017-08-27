@@ -10,41 +10,42 @@
     <Border x:Name="CanvasBorder" BorderBrush="Beige"  Padding="10">
 
         <Canvas Margin = "0,0" Width = "350" Height = "400" >
-            <Label Name = "TitleLabel" Content = "Youtube Downloader 2.0" HorizontalAlignment = "Right" Margin = "60,5" FontWeight = "Bold" FontSize = "20" Panel.ZIndex = "20" >
+            <Label Name = "TitleLabel" Content = "Youtube Downloader 3.0" HorizontalAlignment = "Right" Margin = "60,5" FontWeight = "Bold" FontSize = "20" Panel.ZIndex = "20" FontFamily="Leelawadee UI" >
             </Label>
             <Label Name = "URLLabel" Content = "Enter YT URL Below Then Select Download" HorizontalAlignment = "Right"  Margin = "15,60" FontWeight = "Bold" Panel.ZIndex = "19" >
             </Label>
-            <TextBox x:Name = "URLTextBox"  HorizontalAlignment = "Right" Margin = "35,85,0,0" Width = "auto" MinWidth = "150" MaxWidth = "290" Height = "20" Panel.ZIndex = "18">
-            </TextBox>
+            <TextBox x:Name = "URLTextBox"  HorizontalAlignment = "Right" Width = "150" MinWidth = "150" MaxWidth = "290" Height = "20" Panel.ZIndex = "18" Canvas.Left="35" Canvas.Top="85"/>
             <TextBlock xml:space="preserve" Name="InfoTextblock" Text= "1. Enter the YT URL Into the Textbox 
                                                                         2. Select Download Location
-                                                                        3. Select Download" Margin = "35,240,0,0" TextWrapping = "Wrap" Width = "300" Height = "70" Panel.ZIndex = "20">
-            </TextBlock>
-            <ListBox Name = "Listbox" Margin = "25,180" HorizontalAlignment = "Right" Width = "200" Height = "50" Panel.ZIndex = "10" >
+                                                                        3. Select Download" FontWeight = "Bold" TextWrapping = "Wrap" Width = "230" Height = "49" Panel.ZIndex = "20" Canvas.Left="35" Canvas.Top="240"/>
+            <!--<ListBox Name = "Listbox" Margin = "25,180" HorizontalAlignment = "Right" Width = "200" Height = "50" Panel.ZIndex = "10" >
                 <ListBoxItem Content = "MP3" />
                 <ListBoxItem Content = "Video" />
-            </ListBox>
-            <Image x:Name = "BackgroundImage" Margin = "-90,-80" Width = "500" Height = "500" Panel.ZIndex = "5" Source="{DynamicResource ImageSource}" Stretch="Fill" >
-                <Image.Resources>
-                    <BitmapImage x:Key="ImageSource" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="D:\Documents\Scripting\C#\YTDownloader\YTDownloader\images\yt.png"/>
-                </Image.Resources>
+            </ListBox>-->
+
+            <Image x:Name = "BackgroundImage" Width = "500" Height = "500" Source="Resources/yt2.PNG" Stretch="Fill" Canvas.Left="-94" Canvas.Top="-83" >
                 <Image.Effect >
-                    <BlurEffect Radius = "15" RenderingBias="Quality" />
+                    <BlurEffect Radius = "15" RenderingBias="Quality"/>
                 </Image.Effect>
             </Image>
-            <Button x:Name = "LocationButton" Click="LocationButton_Click" Width = "Auto" Height = "20" Content = 'Select Download Location' Margin = "35,120" Background = "#385de2" Foreground = "#FFFDFDFD" FontWeight = "Bold" VerticalAlignment = "Bottom" HorizontalAlignment = "Right" Panel.ZIndex = "14" >
+            <Button x:Name = "LocationButton" Click="LocationButton_Click" Width = "Auto" Height = "20" Content = 'Select Download Location' Background = "#385de2" Foreground = "#FFFDFDFD" FontWeight = "Bold" VerticalAlignment = "Bottom" HorizontalAlignment = "Right" Panel.ZIndex = "14" Canvas.Left="35" Canvas.Top="145" />
+            <Button x:Name = "CancelButton" Click="CancelButton_Click" Width = "50" Height = "20" Content = 'Cancel' VerticalAlignment = "Bottom" Background = "#c10d1c" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Margin = "220,310" Panel.ZIndex = "13" >
             </Button>
-            <Button x:Name = "CancelButton" Click="CancelButton_Click" Width = "50" Height = "20" Content = 'Cancel' VerticalAlignment = "Bottom" Background = "#c10d1c" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Margin = "220,320" Panel.ZIndex = "13" >
-            </Button>
-            <Button x:Name="DownloadButton" Click="DownloadButton_Click" Width="Auto" Height = "20" Content = 'Download' VerticalAlignment = "Bottom" Background = "#2eaa4b" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Margin = "210,120" Panel.ZIndex = "12" >
-            </Button>
-            <Button x:Name="TestDownloadButton" Click="TestDownloadButton_Click"  Width="Auto" Height = "20" Content = 'TestingDownload' VerticalAlignment = "Bottom" Background = "#2eaa4b" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Margin = "210,150" Panel.ZIndex = "12" >
-            </Button>
-            <StatusBar DockPanel.Dock = "Bottom" Panel.ZIndex = "11" Margin = "-10,333" FontSize = "9" FontWeight = "Bold" Background = "#2eaa4b" Width = "350" Height = "20" >
+            <Button x:Name="UpdateButton" Content="Update" Canvas.Left="250" Canvas.Top="40" Width="auto" Click="UpdateButton_Click"/>
+            <Button x:Name="DownloadButton" Click="DownloadButton_Click" Width="Auto" Height = "20" Content = 'Download' VerticalAlignment = "Bottom" Background = "#2eaa4b" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Panel.ZIndex = "12" Canvas.Left="212" Canvas.Top="145" />
+            <StatusBar DockPanel.Dock = "Bottom" Panel.ZIndex = "11" Margin = "-10,333" Width = "345" Height = "20" FontSize = "9" FontWeight = "Bold" Background = "#2eaa4b">
                 <StatusBarItem >
-                    <TextBlock x:Name = "InfoStatusBar" Text = "Youtube Downloader 2.0" />
+                    <TextBlock x:Name = "InfoStatusBar" Text="Youtube Downloader 3.0"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <TextBlock x:Name="OptionsStatusBar" Margin="40,-4,0,-4" Text="" Width="150" Foreground="Red" FontSize="12">
+                     
+
+                    </TextBlock>
                 </StatusBarItem>
             </StatusBar>
+            <RadioButton x:Name="Mp3RadioButton" Content="MP3" Canvas.Left="35" Canvas.Top="110" Panel.ZIndex="15" FontWeight="Bold" Checked="Mp3RadioButton_Checked"/>
+            <RadioButton x:Name="VideoRadioButton" Content="Video" Canvas.Left="83" Canvas.Top="110" Checked="VideoRadioButton_Checked"  FontFamily="Leelawadee UI" FontWeight="Bold"/>
         </Canvas>
     </Border>
 </Window>

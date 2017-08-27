@@ -72,6 +72,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -143,6 +144,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BackgroundImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BackgroundImage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\yt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\yt2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
