@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YTDownloader.exe" size="194480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YTDownloader.exe" size="199088">
       <assemblyIdentity name="YTDownloader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YZaNc2jGMhWQQh7BHAtKi7mL71PGjzeIzaJTvJtjQrU=</dsig:DigestValue>
+        <dsig:DigestValue>Fi4MdmhrLPI/6w23NhtqPQ729JafinFAuqyDhOsvS/U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

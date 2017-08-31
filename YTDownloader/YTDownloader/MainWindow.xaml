@@ -6,46 +6,98 @@
         xmlns:local="clr-namespace:YTDownloader"
         mc:Ignorable="d"    
         ResizeMode="NoResize"
-        Title = "Youtube Downloader 2.0" Width = "350" Height = "400" >
-    <Border x:Name="CanvasBorder" BorderBrush="Beige"  Padding="10">
+        WindowStartupLocation="CenterScreen"
+        Title = "Youtube Downloader 2.0" Width = "360" Height = "410" >
 
-        <Canvas Margin = "0,0" Width = "350" Height = "400" >
-            <Label Name = "TitleLabel" Content = "Youtube Downloader 3.0" HorizontalAlignment = "Right" Margin = "60,5" FontWeight = "Bold" FontSize = "20" Panel.ZIndex = "20" FontFamily="Leelawadee UI" >
-            </Label>
-            <Label Name = "URLLabel" Content = "Enter YT URL Below Then Select Download" HorizontalAlignment = "Right"  Margin = "15,60" FontWeight = "Bold" Panel.ZIndex = "19" >
-            </Label>
-            <TextBox x:Name = "URLTextBox"  HorizontalAlignment = "Right" Width = "150" MinWidth = "150" MaxWidth = "290" Height = "20" Panel.ZIndex = "18" Canvas.Left="35" Canvas.Top="85"/>
-            <TextBlock xml:space="preserve" Name="InfoTextblock" Text= "1. Enter the YT URL Into the Textbox 
+    <TabControl Canvas.Left="360" Canvas.Top="10" Margin="0,1,0,0">
+        <TabItem Header="Main Window">
+            <Border x:Name="CanvasBorder" BorderBrush="Beige"  Padding="0" Margin="-3,-2,4,-3">
+
+                <Canvas Margin = "-3,-4,-3,-30" Width = "350" >
+                    <Label Name = "TitleLabel" Content = "Youtube Downloader 3.1" HorizontalAlignment = "Right" Margin = "60,5" FontWeight = "Bold" FontSize = "20" Panel.ZIndex = "20" FontFamily="Leelawadee UI" >
+                    </Label>
+                    <Label Name = "URLLabel" Content = "Enter YT URL Below Then Select Download" HorizontalAlignment = "Right"  Margin = "15,60" FontWeight = "Bold" Panel.ZIndex = "19" >
+                    </Label>
+                    <TextBox x:Name = "URLTextBox"  HorizontalAlignment = "Right" Width = "214" MinWidth = "150" MaxWidth = "290" Height = "20" Panel.ZIndex = "18" Canvas.Left="20" Canvas.Top="85"/>
+                    <TextBlock xml:space="preserve" Name="InfoTextblock" Text= "1. Enter the YT URL Into the Textbox 
                                                                         2. Select Download Location
                                                                         3. Select Download" FontWeight = "Bold" TextWrapping = "Wrap" Width = "230" Height = "49" Panel.ZIndex = "20" Canvas.Left="35" Canvas.Top="240"/>
-            <!--<ListBox Name = "Listbox" Margin = "25,180" HorizontalAlignment = "Right" Width = "200" Height = "50" Panel.ZIndex = "10" >
+                    <!--<ListBox Name = "Listbox" Margin = "25,180" HorizontalAlignment = "Right" Width = "200" Height = "50" Panel.ZIndex = "10" >
                 <ListBoxItem Content = "MP3" />
                 <ListBoxItem Content = "Video" />
             </ListBox>-->
 
-            <Image x:Name = "BackgroundImage" Width = "500" Height = "500" Source="Resources/yt2.PNG" Stretch="Fill" Canvas.Left="-94" Canvas.Top="-83" >
-                <Image.Effect >
-                    <BlurEffect Radius = "15" RenderingBias="Quality"/>
-                </Image.Effect>
-            </Image>
-            <Button x:Name = "LocationButton" Click="LocationButton_Click" Width = "Auto" Height = "20" Content = 'Select Download Location' Background = "#385de2" Foreground = "#FFFDFDFD" FontWeight = "Bold" VerticalAlignment = "Bottom" HorizontalAlignment = "Right" Panel.ZIndex = "14" Canvas.Left="35" Canvas.Top="145" />
-            <Button x:Name = "CancelButton" Click="CancelButton_Click" Width = "50" Height = "20" Content = 'Cancel' VerticalAlignment = "Bottom" Background = "#c10d1c" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Margin = "220,310" Panel.ZIndex = "13" >
-            </Button>
-            <Button x:Name="UpdateButton" Content="Update" Canvas.Left="250" Canvas.Top="40" Width="auto" Click="UpdateButton_Click"/>
-            <Button x:Name="DownloadButton" Click="DownloadButton_Click" Width="Auto" Height = "20" Content = 'Download' VerticalAlignment = "Bottom" Background = "#2eaa4b" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Panel.ZIndex = "12" Canvas.Left="212" Canvas.Top="145" />
-            <StatusBar DockPanel.Dock = "Bottom" Panel.ZIndex = "11" Margin = "-10,333" Width = "345" Height = "20" FontSize = "9" FontWeight = "Bold" Background = "#2eaa4b">
-                <StatusBarItem >
-                    <TextBlock x:Name = "InfoStatusBar" Text="Youtube Downloader 3.0"/>
-                </StatusBarItem>
-                <StatusBarItem>
-                    <TextBlock x:Name="OptionsStatusBar" Margin="40,-4,0,-4" Text="" Width="150" Foreground="Red" FontSize="12">
-                     
+                    <Image x:Name = "BackgroundImage" Width = "512" Height = "514" Source="Resources/yt2.PNG" Stretch="Fill" Canvas.Left="-69" Canvas.Top="-78" >
+                        <Image.Effect >
+                            <BlurEffect Radius = "15" RenderingBias="Quality"/>
+                        </Image.Effect>
+                    </Image>
+                    <Button x:Name = "LocationButton" Click="LocationButton_Click" Width = "Auto" Height = "20" Content = 'Select Download Location' Background = "#385de2" Foreground = "#FFFDFDFD" FontWeight = "Bold" VerticalAlignment = "Bottom" HorizontalAlignment = "Right" Panel.ZIndex = "14" Canvas.Left="35" Canvas.Top="145" />
+                    <Button x:Name = "CancelButton" Click="CancelButton_Click" Width = "50" Height = "20" Content = 'Cancel' VerticalAlignment = "Bottom" Background = "#c10d1c" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Margin = "220,310" Panel.ZIndex = "13" >
+                    </Button>
+                    <Button x:Name="UpdateButton" Content="Update" Canvas.Left="250" Canvas.Top="40" Width="auto" Click="UpdateButton_Click"/>
+                    <Button x:Name="PasteClipboardButton" Content="Paste Clipboard" Canvas.Left="235" Canvas.Top="85" Width="auto" Click="PasteClipboardButton_Click" />
+                    <Button x:Name="DownloadButton" Click="DownloadButton_Click" Width="Auto" Height = "20" Content = 'Download' VerticalAlignment = "Bottom" Background = "#2eaa4b" HorizontalAlignment = "Right" Foreground = "#FFFDFDFD" Panel.ZIndex = "12" Canvas.Left="212" Canvas.Top="145" />
 
-                    </TextBlock>
-                </StatusBarItem>
-            </StatusBar>
-            <RadioButton x:Name="Mp3RadioButton" Content="MP3" Canvas.Left="35" Canvas.Top="110" Panel.ZIndex="15" FontWeight="Bold" Checked="Mp3RadioButton_Checked"/>
-            <RadioButton x:Name="VideoRadioButton" Content="Video" Canvas.Left="83" Canvas.Top="110" Checked="VideoRadioButton_Checked"  FontFamily="Leelawadee UI" FontWeight="Bold"/>
-        </Canvas>
-    </Border>
+                    <StatusBar DockPanel.Dock = "Bottom" Panel.ZIndex = "0" Width = "353" Height = "20" FontSize = "9" FontWeight = "Bold" Background = "#2eaa4b" Canvas.Top="331" Canvas.Left="-1">
+                        <StatusBarItem >
+                            <TextBlock x:Name = "InfoStatusBar" Text="Youtube Downloader 3.1"/>
+                        </StatusBarItem>
+                        <StatusBarItem>
+                            <TextBlock x:Name="OptionsStatusBar" Margin="40,-4,0,-4" Text="" Width="150" Foreground="Red" FontSize="12">
+                            </TextBlock>
+                        </StatusBarItem>
+                    </StatusBar>
+                    <CheckBox x:Name="InternalCheckBox" Content="Testing" Canvas.Left="250" Canvas.Top="110" FontFamily="Leelawadee UI" FontWeight="Bold" />
+                    <!--< x:Name="InternalCheckBox" Content="Testing" Canvas.Left="250" Canvas.Top="110"  FontFamily="Leelawadee UI" FontWeight="Bold"/>-->
+                    <GroupBox Height="25" Width="129" Canvas.Top="110" Canvas.Left="27" BorderThickness="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0*"/>
+                                <ColumnDefinition Width="11*"/>
+                                <ColumnDefinition Width="15*"/>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton x:Name="Mp3RadioButton" Content="MP3" Panel.ZIndex="15" FontWeight="Bold" Checked="Mp3RadioButton_Checked" Margin="2,4,66,-4" Grid.ColumnSpan="3" IsChecked="True"/>
+                            <RadioButton x:Name="VideoRadioButton" Content="Video" Checked="VideoRadioButton_Checked"  FontFamily="Leelawadee UI" FontWeight="Bold" Margin="3,4,8,-4" Grid.Column="2"/>
+                        </Grid>
+                    </GroupBox>
+
+
+                </Canvas>
+            </Border>
+        </TabItem>
+        <TabItem Header="Help" >
+            <Border x:Name="CanvasBorder2" BorderBrush="Beige"  Padding="0" Margin="-3,-2,4,-3">
+
+                <Canvas Margin = "-3,-4,-3,-30" Width = "350" >
+                    <Image x:Name = "BackgroundImage2" Width = "512" Height = "514" Source="Resources/yt2.PNG" Stretch="Fill" Canvas.Left="-69" Canvas.Top="-78" Visibility="Hidden" >
+                        <Image.Effect >
+                            <BlurEffect Radius = "15" RenderingBias="Quality"/>
+                        </Image.Effect>
+                    </Image>
+
+                    <Label x:Name = "HelpTitleLabel" Content = "Youtube Downloader 3.1" HorizontalAlignment = "Right" FontWeight = "Bold" FontSize = "18" Panel.ZIndex = "20" FontFamily="Leelawadee UI" Height="35" Canvas.Left="58" />
+                    <Grid Canvas.Left="46">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name = "VCHelpLabel" Content = "-Visual C++ 2010 Redistributable Package (x86)" HorizontalAlignment = "Right"  Margin = "0,292,201,314" FontWeight = "Bold" Panel.ZIndex = "0" Grid.Column="1" Width="279" />
+                        <Button x:Name = "CancelHelpButton" Click="CancelHelpButton_Click"  Width = "50" Height = "20" Content = 'Cancel' Background = "#c10d1c" Foreground = "#FFFDFDFD" Margin = "220,310" Panel.ZIndex="1" Grid.Column="1" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" />
+                        <TextBlock x:Name = "LogsTextBlock" Text="Test Log Data" HorizontalAlignment = "Right" Width = "325" MinWidth = "150" MaxWidth = "290" Margin="-18,40,183,310" Grid.ColumnSpan="2" FontSize="14" TextWrapping="Wrap"/>
+                    </Grid>
+
+                    <StatusBar DockPanel.Dock = "Bottom" Panel.ZIndex = "0" Width = "353" Height = "20" FontSize = "9" FontWeight = "Bold" Background = "#2eaa4b" Canvas.Top="331" Canvas.Left="-1">
+                        <StatusBarItem >
+                            <TextBlock x:Name = "InfoHelpStatusBar" Text="Youtube Downloader 3.1" />
+                        </StatusBarItem>
+                        <StatusBarItem>
+                            <TextBlock x:Name="OptionsHelpStatusBar" Margin="40,-4,0,-4" Text="" Width="150" Foreground="Red" FontSize="12"/>
+                        </StatusBarItem>
+                    </StatusBar>
+                </Canvas>
+            </Border>
+        </TabItem>
+    </TabControl>
 </Window>
